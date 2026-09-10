@@ -1,37 +1,42 @@
-# Timsah Türü Sınıflandırma
+# Predicting Crocodile Scientific Names with ML
+# Makine Öğrenmesi ile Timsah Türü Sınıflandırma
 
-Bu proje, timsahlara ait fiziksel ve biyolojik özelliklerden yararlanarak bilimsel
-tür etiketlerini tahmin eden çok sınıflı bir makine öğrenmesi çalışmasıdır.
+A classification project predicting the scientific names of crocodiles based on their physical and biological features.
 
-[Notebook'u nbviewer ile aç](https://nbviewer.org/github/sametcsk/Predicting-Crocodile-Scientific-Names-with-ML/blob/main/crocodile-species-classification.ipynb)
+Timsahların fiziksel ve biyolojik özelliklerine dayanarak bilimsel adlarını tahmin eden bir sınıflandırma projesi.
 
-## Yöntem
+> **Task / Görev:** Classification / Sınıflandırma · **Domain / Alan:** Biology / Biyoloji
 
-- Veri temizleme ve keşifsel veri analizi
-- Kategorik ve sayısal özelliklerin hazırlanması
-- Dokuz farklı sınıflandırma algoritmasının karşılaştırılması
-- Test kümesi ve çapraz doğrulama sonuçlarının birlikte incelenmesi
+---
 
-## Sonuçlar
+## Project Structure / Proje Yapısı
 
-| Model | Test doğruluğu | Çapraz doğrulama doğruluğu |
-| --- | ---: | ---: |
-| Naive Bayes | %98,86 | %97,39 |
-| Gradient Boosting | %98,30 | %97,16 |
-| XGBoost | %96,02 | %96,82 |
-| Random Forest | %94,32 | %94,32 |
+```text
+Predicting-Crocodile-Scientific-Names-with-ML/
+├── notebooks/
+│   └── crocodile-species-classification.ipynb   # Main modeling notebook
+├── data/
+│   └── crocodile_dataset.csv
+├── src/
+│   └── __init__.py          # Placeholder for future modularization
+├── requirements.txt
+└── .gitignore
+└── README.md
+```
 
-Bazı türlerde örnek sayısı oldukça düşüktür. Bu nedenle yüksek genel doğruluk,
-tüm türlerde aynı güvenilirliğin sağlandığı anlamına gelmez.
-
-## Kullanılan Araçlar
-
-`Python` • `Pandas` • `scikit-learn` • `XGBoost` • `LightGBM` • `Matplotlib`
-
-## Çalıştırma
+## Quick Start / Hızlı Başlangıç
 
 ```bash
 git clone https://github.com/sametcsk/Predicting-Crocodile-Scientific-Names-with-ML.git
 cd Predicting-Crocodile-Scientific-Names-with-ML
-jupyter notebook crocodile-species-classification.ipynb
+python -m venv .venv && .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Launch Jupyter Notebook / Jupyter Notebook'u başlatın
+jupyter notebook notebooks/crocodile-species-classification.ipynb
 ```
+
+## License / Lisans
+
+Educational purposes.
+Eğitim amaçlıdır.
